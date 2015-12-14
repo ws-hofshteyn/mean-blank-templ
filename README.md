@@ -1,44 +1,15 @@
-#Moozii-backend#
+#MEAN stack blank templ#
 
-### Update ###
+If you have already installed all global dependencies such as Gulp and etc.
 
-To view API Reference go to /moozi-backend/public/api.html (open in browser in double click)
+git clone https://github.com/ws-hofshteyn/mean-blank-templ.git
 
-## Instructions for running applications ##
-
-```
-git clone https://github.com/ideasX/moozi-backend.git
-
-cd moozi-backend
+cd mean-blank-templ
 
 npm install        //maybe with sudo//
 
-npm bower install
-npm install express
-npm install passport
-npm install mongoose
-npm install passport-local-mongoose
-npm install express-session
-npm install compression
-npm install serve-favicon
-npm install cookie-parser
-npm install body-parser
-npm install method-overide
-npm install morgan
-npm install multer
-npm install connect-mongo
-npm install passport-local
-npm install aws-sdk
-npm install thumbnail
-npm install cities
-npm install lodash
-npm install async
-npm install jws-simple
-npm install nodemailer
-npm install email-templates
+bower install
 
-Run:  node server
+Run command:  *gulp*
 ```
 Go to http://localhost:3000
-
-link for dev: http://moozii-backend.dev.ideasx.net/
