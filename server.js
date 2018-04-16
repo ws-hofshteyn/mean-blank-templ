@@ -21,9 +21,9 @@ app.set('ipaddr', process.env.OPENSHIFT_NODEJS_IP || 'localhost');
 require('./config/express')(app, config, passport);
 require('./config/passport')(passport, config);
 
-fs.readdirSync(routes_path).forEach(function (file) {
-	require(routes_path + '/' + file)(app, passport, auth);
-});
+// fs.readdirSync(routes_path).forEach(function (file) {
+// 	require(routes_path + '/' + file)(app, passport, auth);
+// });
 
 mongoose.createConnection(config.db);
 server.listen(app.get('port'), app.get('ipaddr'), function(){
