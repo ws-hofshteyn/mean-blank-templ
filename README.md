@@ -10,19 +10,13 @@ Step 2
 ```
 cd mean-blank-templ
 ```
-
 Step 3
 ```
-npm install
+sudo npm install && bower install
 ```
 Step 4
 ```
-bower install
-```
-Step 5
-```
 gulp  
 ```
-
-Step 6
+Step 5
 Go to http://localhost:3000
