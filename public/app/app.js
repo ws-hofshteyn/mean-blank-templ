@@ -2,11 +2,10 @@
 	'use strict';
 
 	angular
-		.module('blankApp', [
-			'ui.router',
+		.module('BlankApp', [
 			'ngMaterial',
-			'ngAnimate',
-			'ngAria'
+			'ngMessages',
+			'ui.router'
 		])
 		.config(config);
 
@@ -21,18 +20,24 @@
 				},
 				views: {
 					'': {
-						templateUrl: 'views/core/main.html'
+						templateUrl: 'app/main.html'
 					},
 					'navbar@home': {
-						templateUrl: "views/core/navbar.html",
-						controller: 'NavCtrl'
+						templateUrl: "app/navbar/navbar.html",
+						controller: 'NavCtrl',
+						controllerAs: 'navbar'
+					},
+					'dashboard@home': {
+						templateUrl: "app/dashboard/dashboard.html",
+						controller: 'DashboardCtrl',
+						controllerAs: 'dashboard'
 					}
 				}
 			});
 			$stateProvider
 				.state('home.dashboard', {
 					url:'/',
-					templateUrl: 'views/core/main.html'
+					templateUrl: 'app/main.html'
 				});
 	}
 

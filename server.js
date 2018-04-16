@@ -25,7 +25,7 @@ fs.readdirSync(routes_path).forEach(function (file) {
 	require(routes_path + '/' + file)(app, passport, auth);
 });
 
-mongoose.connect(config.db);
+mongoose.createConnection(config.db);
 server.listen(app.get('port'), app.get('ipaddr'), function(){
 	console.log('Express server listening on IP/hostname: "' + app.get('ipaddr') + '" and port: "' + app.get('port') + '"');
 });

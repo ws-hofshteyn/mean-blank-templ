@@ -1,17 +1,28 @@
-#MEAN stack blank templ#
+**MEAN stack blank templ**
 
 If you have already installed all global dependencies such as Gulp and etc.
 
+Step 1
 ```
 git clone https://github.com/ws-hofshteyn/mean-blank-templ.git
-
-cd mean-blank-templ
-
-npm install        *// maybe with sudo*
-
-bower install
-
-gulp 				*//Run command*
-
 ```
+Step 2
+```
+cd mean-blank-templ
+```
+
+Step 3
+```
+npm install
+```
+Step 4
+```
+bower install
+```
+Step 5
+```
+gulp  
+```
+
+Step 6
 Go to http://localhost:3000

@@ -1,10 +1,10 @@
 {
-  "name": "serverSide_moozi",
+  "name": "mean-blank-template",
   "version": "0.0.1",
   "dependencies": {
-    "jquery": "~2.1.4",
-    "bootstrap": "~3.3.6",
-    "angular-material": "~0.11.4",
-    "angular-ui-router": "~0.2.15"
+    "angular-material": "^1.1.8",
+    "bootstrap": "^4.1.0",
+    "jquery": "^3.3.1",
+    "angular-ui-router": "^1.0.15"
   }
 }

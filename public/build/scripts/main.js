@@ -2,11 +2,10 @@
 	'use strict';
 
 	angular
-		.module('blankApp', [
-			'ui.router',
+		.module('BlankApp', [
 			'ngMaterial',
-			'ngAnimate',
-			'ngAria'
+			'ngMessages',
+			'ui.router'
 		])
 		.config(config);
 
@@ -21,18 +20,24 @@
 				},
 				views: {
 					'': {
-						templateUrl: 'views/core/main.html'
+						templateUrl: 'app/main.html'
 					},
 					'navbar@home': {
-						templateUrl: "views/core/navbar.html",
-						controller: 'NavCtrl'
+						templateUrl: "app/navbar/navbar.html",
+						controller: 'NavCtrl',
+						controllerAs: 'navbar'
+					},
+					'dashboard@home': {
+						templateUrl: "app/dashboard/dashboard.html",
+						controller: 'DashboardCtrl',
+						controllerAs: 'dashboard'
 					}
 				}
 			});
 			$stateProvider
 				.state('home.dashboard', {
 					url:'/',
-					templateUrl: 'views/core/main.html'
+					templateUrl: 'app/main.html'
 				});
 	}
 
@@ -42,10 +47,49 @@
 
 (function () {
 
-	function NavCtrl () {}
+	function DashboardCtrl () {
+
+		let vm = this;
+
+		angular.extend(vm, {
+            title: 'MEAN Stack App',
+            components: [ 
+                'Express',
+                'Node JS',
+                'MongoDB',
+                'Angular',
+                'Bootstrap',
+                'Angular-material',
+                'Gulp'
+            ]
+		});
+
+	}
 
 	angular
-		.module('blankApp')
+		.module('BlankApp')
+		.controller('DashboardCtrl', DashboardCtrl);
+
+	DashboardCtrl.$inject = [];
+
+})();
+
+//example controller
+
+(function () {
+
+	function NavCtrl () {
+
+		let vm = this;
+
+		angular.extend(vm, {
+			title: 'Mean stack example'
+		});
+
+	}
+
+	angular
+		.module('BlankApp')
 		.controller('NavCtrl', NavCtrl);
 
 	NavCtrl.$inject = [];
